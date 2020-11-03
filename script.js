@@ -1,9 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 var clearBtn = document.querySelector("#clear");
+var textArea = document.querySelector("#password");
 
-// Write password to the #password input
-function writePassword() {
+// Function for generating password
+function generatePassword() {
   var passwordLength = prompt(
     "Insert desired number of characters(from 8 to 128) for your password"
   );
@@ -18,32 +19,42 @@ function writePassword() {
   var lowerCaseLetters = upperCaseLetters.toLowerCase();
 
   var char = "";
-  (upperCase) ? char += upperCaseLetters : "";
-  (lowerCase) ? char += lowerCaseLetters : "";
-  (numbers) ? char += numb : "";
-  (symbols) ? char += symb : "";
-
-  var pass = "";
-
-  for (var i = 0; i < passwordLength; i++){
-      pass = pass + char.charAt(Math.floor(Math.random() * (char.length - 1)));
+  if (upperCase) {
+    char += upperCaseLetters;
   }
-  
+  if (lowerCase) {
+    char += lowerCaseLetters;
+  }
+  if (numbers) {
+    char += numb;
+  }
+  if (symbols) {
+    char += symb;
+  }
 
-  //var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  if (char === "") {
+    alert("You didn't choose any parameters.Choose at least one");
+    generatePassword();
+  } else {
+    var password = "";
 
-  passwordText.value = pass;
+    for (var i = 0; i < passwordLength; i++) {
+      password = password + char.charAt(Math.floor(Math.random() * (char.length - 1)));
+    }
+
+    var passwordText = document.querySelector("#password");
+
+    passwordText.value = password;
+  }
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", generatePassword);
 
-var clearBtn = document.querySelector("#clear");
-var textArea = document.querySelector("#password");
+//var clearBtn = document.querySelector("#clear");
+//var textArea = document.querySelector("#password");
 
 // function for clear button
 clearBtn.addEventListener("click", function () {
-    textArea.value = "";
-})
-
+  textArea.value = "";
+});
