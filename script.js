@@ -1,5 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var clearBtn = document.querySelector("#clear");
 
 // Write password to the #password input
 function writePassword() {
@@ -14,7 +15,7 @@ function writePassword() {
   var symb = "~!@#$%^&*()_+{}:?><;.,";
   var numb = "1234567890";
   var upperCaseLetters = "ABCDEFGHIJKLMNOPRSTUVWXYZ";
-  var lowerCaseLetters = upperLetters.toLowerCase();
+  var lowerCaseLetters = upperCaseLetters.toLowerCase();
 
   var char = "";
   (upperCase) ? char += upperCaseLetters : "";
@@ -37,3 +38,12 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+var clearBtn = document.querySelector("#clear");
+var textArea = document.querySelector("#password");
+
+// function for clear button
+clearBtn.addEventListener("click", function () {
+    textArea.value = "";
+})
+
