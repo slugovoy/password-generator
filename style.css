@@ -11,10 +11,10 @@ body,
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
+  background-image: url(https://miro.medium.com/max/760/1*zSPtMkp70YN9JDhFRaHHXA.jpeg);
 }
 
 .wrapper {
@@ -25,19 +25,21 @@ body {
 
 header {
   text-align: center;
-  padding: 20px;
+  padding: 15px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: white;
 }
 
 .card {
   background-color: hsl(0, 0%, 100%);
+  opacity: 0.93;
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
   color: hsl(206, 17%, 28%);
   font-size: 18px;
   margin: 0 auto;
+  margin-bottom: 2rem;
   max-width: 800px;
   padding: 30px 40px;
 }
@@ -48,14 +50,37 @@ header {
   width: 100%;
   background: #e7e9eb;
   height: 2px;
+  
 }
-
-.card-body {
-  min-height: 100px;
+h2 {
+    text-align: center;
 }
-
+h3 {
+    text-decoration: underline;
+    margin-top: 1.5rem;
+}
+#slider {
+    width: 100%;
+}
+#length {
+    display: inline-block;
+    width: 7rem;
+    font-size: 1.2rem;
+}
+label {
+    color: black;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.checkboxes {
+    width: 1.5rem;
+    height: 1.5rem;
+    
+}
 .card-footer {
   text-align: center;
+  margin-top: 10px;
+  border-top: 1px solid black;
 }
 
 .card-footer::before {
@@ -64,6 +89,7 @@ header {
   width: 100%;
   background: #e7e9eb;
   height: 2px;
+  
 }
 
 .card-footer::after {
