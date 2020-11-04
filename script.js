@@ -36,7 +36,6 @@ let symbols = document.getElementById("symbols");
 //Condition checking if user chose anything
   if (char === "") {
     alert("You didn't choose any parameters.Choose at least one");
-    generatePassword();
   } else {
     let password = "";
 //Generating password basing on user's choices
