@@ -60,12 +60,13 @@ h3 {
     margin-top: 1.5rem;
 }
 #slider {
-    width: 100%;
+    width: 93%;
 }
 #length {
     display: inline-block;
     width: 7rem;
     font-size: 1.2rem;
+    margin-top: 1rem;
 }
 label {
     color: black;
