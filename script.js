@@ -52,6 +52,9 @@ let symbols = document.getElementById("symbols");
 // Add event listener to generate button
 generateBtn.addEventListener("click", generatePassword);
 
+// setting default length
+document.getElementById("length").innerHTML = "Length: 8";
+
 //Function for displaying password length on a screen
  document.getElementById("slider").oninput = 
  function () {
