@@ -6,7 +6,7 @@ let textArea = document.querySelector("#password");
 
 // Function for generating password
 function generatePassword() {
-
+// Declariang variables
 let passwordLength = document.getElementById("slider").value;
 let upperCase = document.getElementById("upper");
 let lowerCase = document.getElementById("lower");
@@ -19,6 +19,8 @@ let symbols = document.getElementById("symbols");
   const lowerCaseLetters = upperCaseLetters.toLowerCase();
 
   let char = "";
+
+  //Conditions to check which boxes were chosen
   if (upperCase.checked) {
     char += upperCaseLetters;
   }
@@ -31,13 +33,13 @@ let symbols = document.getElementById("symbols");
   if (symbols.checked) {
     char += symb;
   }
-
+//Condition checking if user chose anything
   if (char === "") {
     alert("You didn't choose any parameters.Choose at least one");
     generatePassword();
   } else {
     let password = "";
-
+//Generating password basing on user's choices
     for (var i = 0; i < passwordLength; i++) {
       password = password + char.charAt(Math.floor(Math.random() * (char.length - 1)));
     }
@@ -51,7 +53,7 @@ let symbols = document.getElementById("symbols");
 // Add event listener to generate button
 generateBtn.addEventListener("click", generatePassword);
 
-
+//Function for displaying password length on a screen
  document.getElementById("slider").oninput = 
  function () {
      let sliderVal = document.getElementById("slider").value;
