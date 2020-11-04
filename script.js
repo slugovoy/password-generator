@@ -1,3 +1,4 @@
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 var clearBtn = document.querySelector("#clear");
@@ -5,13 +6,12 @@ var textArea = document.querySelector("#password");
 
 // Function for generating password
 function generatePassword() {
-  var passwordLength = prompt(
-    "Insert desired number of characters(from 8 to 128) for your password"
-  );
-  var upperCase = confirm("Do you want to include upper case characters?");
-  var lowerCase = confirm("Do you want to include lower case characters?");
-  var numbers = confirm("Do you want to include numbers?");
-  var symbols = confirm("Do you want to include symbols?");
+
+var passwordLength = document.getElementById("slider").value;
+var upperCase = document.getElementById("upper");
+var lowerCase = document.getElementById("lower");
+var numbers = document.getElementById("numbers");
+var symbols = document.getElementById("symbols");
 
   var symb = "~!@#$%^&*()_+{}:?><;.,";
   var numb = "1234567890";
@@ -19,16 +19,16 @@ function generatePassword() {
   var lowerCaseLetters = upperCaseLetters.toLowerCase();
 
   var char = "";
-  if (upperCase) {
+  if (upperCase.checked) {
     char += upperCaseLetters;
   }
-  if (lowerCase) {
+  if (lowerCase.checked) {
     char += lowerCaseLetters;
   }
-  if (numbers) {
+  if (numbers.checked) {
     char += numb;
   }
-  if (symbols) {
+  if (symbols.checked) {
     char += symb;
   }
 
@@ -51,10 +51,21 @@ function generatePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", generatePassword);
 
-//var clearBtn = document.querySelector("#clear");
-//var textArea = document.querySelector("#password");
+document.getElementById("length").innerHTML = "Length: 20";
+
+ document.getElementById("slider").oninput = 
+ function () {
+     var sliderVal = document.getElementById("slider").value;
+     if(sliderVal > 0) {
+         document.getElementById("length").innerHTML = "Length: " + sliderVal;
+
+     } else {
+         document.getElementById("length").innerHTML = "Length: 1";
+     }
+ } 
 
 // function for clear button
 clearBtn.addEventListener("click", function () {
   textArea.value = "";
 });
+

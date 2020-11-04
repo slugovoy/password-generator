@@ -11,6 +11,7 @@
   <body>
     <!-- Creating a class -->
     <div class="wrapper">
+
       <!-- Header -->
       <header>
         <h1>Password Generator</h1>
@@ -27,6 +28,7 @@
             id="password"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
+            rows="1"
           ></textarea>
         </div>
         <!-- Creating a settings box with choices -->
@@ -38,6 +40,7 @@
                 <input type="range" min="8" max="128" name="slider" id="slider">
             </div>
             <div id="length"></div>
+            <br><br>
             <div class="row">
                 <input class="checkboxes" type="checkbox" id="upper">
                 <label for="upper">Include Upper Case Letters</label> 
