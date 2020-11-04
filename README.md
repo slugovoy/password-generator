@@ -34,7 +34,7 @@ Conditions that allow to check if user chose any options and loop for generating
 
 Function that allows clear field with password
 
-![Clear function](images/ScreenshotClearFunction.png)
+![Clear function](images/ScreenShotClearFunction.png)
 
 
 Function that allows track the value of slider and display it on a screen
