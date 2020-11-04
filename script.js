@@ -1,24 +1,24 @@
 
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
-var clearBtn = document.querySelector("#clear");
-var textArea = document.querySelector("#password");
+let generateBtn = document.querySelector("#generate");
+let clearBtn = document.querySelector("#clear");
+let textArea = document.querySelector("#password");
 
 // Function for generating password
 function generatePassword() {
 
-var passwordLength = document.getElementById("slider").value;
-var upperCase = document.getElementById("upper");
-var lowerCase = document.getElementById("lower");
-var numbers = document.getElementById("numbers");
-var symbols = document.getElementById("symbols");
+let passwordLength = document.getElementById("slider").value;
+let upperCase = document.getElementById("upper");
+let lowerCase = document.getElementById("lower");
+let numbers = document.getElementById("numbers");
+let symbols = document.getElementById("symbols");
 
-  var symb = "~!@#$%^&*()_+{}:?><;.,";
-  var numb = "1234567890";
-  var upperCaseLetters = "ABCDEFGHIJKLMNOPRSTUVWXYZ";
-  var lowerCaseLetters = upperCaseLetters.toLowerCase();
+  const symb = "~!@#$%^&*()_+{}:?><;.,";
+  const numb = "1234567890";
+  const upperCaseLetters = "ABCDEFGHIJKLMNOPRSTUVWXYZ";
+  const lowerCaseLetters = upperCaseLetters.toLowerCase();
 
-  var char = "";
+  let char = "";
   if (upperCase.checked) {
     char += upperCaseLetters;
   }
@@ -36,7 +36,7 @@ var symbols = document.getElementById("symbols");
     alert("You didn't choose any parameters.Choose at least one");
     generatePassword();
   } else {
-    var password = "";
+    let password = "";
 
     for (var i = 0; i < passwordLength; i++) {
       password = password + char.charAt(Math.floor(Math.random() * (char.length - 1)));
@@ -51,11 +51,10 @@ var symbols = document.getElementById("symbols");
 // Add event listener to generate button
 generateBtn.addEventListener("click", generatePassword);
 
-document.getElementById("length").innerHTML = "Length: 20";
 
  document.getElementById("slider").oninput = 
  function () {
-     var sliderVal = document.getElementById("slider").value;
+     let sliderVal = document.getElementById("slider").value;
      if(sliderVal > 0) {
          document.getElementById("length").innerHTML = "Length: " + sliderVal;
 
