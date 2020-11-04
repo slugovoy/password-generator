@@ -43,3 +43,6 @@ Function that allows track the value of slider and display it on a screen
 ![Tracking value](images/ScreenShotTrackingLength.png)
 
 
+Link to deployed project  https://slugovoy.github.io/password-generator/
+
+
