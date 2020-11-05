@@ -13,8 +13,8 @@ body,
 }
 body {
   font-family: sans-serif;
+  background-image: url(images/passwordImage.jpg);
   background-color: #f9fbfd;
-  background-image: url(https://miro.medium.com/max/760/1*zSPtMkp70YN9JDhFRaHHXA.jpeg);
 }
 
 .wrapper {
