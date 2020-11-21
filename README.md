@@ -1,3 +1,6 @@
+## Password Generator Application
+
+
 Password Generator project allows you create a random password with combination of characters that you can choose.
 
 Link to deployed project  https://slugovoy.github.io/password-generator/
